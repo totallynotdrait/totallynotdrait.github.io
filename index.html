@@ -3,11 +3,29 @@
 <head>
     <title>aitmexd :: index</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" type="image/png" href="src/intmain/at.png">
 </head>
+
 <body>
+    
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const dateTimeString = now.toLocaleString();
+            document.getElementById('datetime').textContent = dateTimeString;
+        }
+
+        // Update the date and time every second
+        setInterval(updateDateTime, 0);
+
+        // Initial call to display the date and time immediately
+        updateDateTime();
+    </script>
     <div class="topbar">
-        <a href="index.html">local::index</a>
-        <a href="blog.html">local::blog</a>
+        <div>
+            <a href="index.html">local::index</a>
+            <a href="blog.html">local::blog</a>
+        </div>
     </div>
     <div class="container">
         <h1>dr.ait</h1>
@@ -15,17 +33,31 @@
         <h2>Info</h2>
         <center>
             <a href="https://github.com/totallynotdrait">GitHub</a>
-            <a href="https://www.furaffinity.net/user/drait">FurAffinity</a>
+            <a href="https://www.twitch.tv/ait123">Twitch</a>
             <a href="https://open.spotify.com/intl-it/artist/7iihXqbJPjN4YGDi2pjXjp">Spotify</a>
-            <a href="https://twitter.com/Dr_SonoNull">X (ignore the following)</a>
         </center>
         <p>Discord: dr.ait</p>
         <br></br>
-        <img src="src/badges/wbx.png", width="88", height="15">
-        <img src="src/badges/x.gif", width="88", height="31">
-        <img src="src/badges/FreeInternetExplorerBadge.gif", width="88", height="31">
-        <img src="src/badges/winfile.gif", width="88", height="31">    
-        <img src="src/badges/SpinningNetscape.gif", width="50", height="50">
+        <div class="subcontainer">
+            <img src="src/badges/wbx.png">
+            <img src="src/badges/rom.bmp">
+            <img src="src/badges/com.bmp">
+            <img src="src/badges/msn.bmp">
+            <img src="src/badges/blogs.bmp">
+            <img src="src/badges/ch.bmp">
+            <img src="src/badges/ff.bmp">
+            <img src="src/badges/w2k3.bmp">
+            <img src="src/badges/hqm.bmp">
+            <img src="src/badges/linux.bmp">
+            <img src="src/badges/ip3.bmp">
+            <img src="src/badges/ip4.bmp">
+            <img src="src/badges/ps2.bmp">
+            <img src="src/badges/clij.bmp">
+            <img src="src/badges/ilm3.bmp">
+            <img src="src/badges/ilm.bmp">
+            <img src="src/badges/ubt.bmp">
+            <img src="src/badges/bsh.bmp">
+        </div>
         
     </div>
 </body>
