@@ -11,6 +11,14 @@ body {
     background-size: 40px;
     image-rendering: pixelated;
 }
+img {
+    image-rendering: pixelated; /* Makes the image render with a pixelated look */
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    image-rendering: -o-pixelated; /* Opera */
+    image-rendering: -webkit-optimize-contrast; /* Safari */
+    -ms-interpolation-mode: nearest-neighbor; /* IE */
+}
+
 .container {
     width: 1100px;
     margin: auto;
