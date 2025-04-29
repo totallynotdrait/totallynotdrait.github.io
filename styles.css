@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'proggy-clean';
-    src: url(src/fonts/ProggyClean.ttf);
+    src: url(/src/fonts/FiraCodeNerdFont.ttf);
 }
 
 body {
@@ -16,10 +16,11 @@ body {
     -ms-interpolation-mode: nearest-neighbor; /
 }
 img {
-    image-rendering: pixelated; /* Makes the image render with a pixelated look */
-    image-rendering: -moz-crisp-edges; /* Firefox */
+    
     image-rendering: -o-pixelated; /* Opera */
+    image-rendering: -moz-crisp-edges; /* Firefox */
     image-rendering: -webkit-optimize-contrast; /* Safari */
+    image-rendering: pixelated; /* Makes the image render with a pixelated look */
     -ms-interpolation-mode: nearest-neighbor; /* IE */
 }
 
@@ -61,7 +62,7 @@ h1, h2 {
 }
 
 p, a {
-    font-size: 17px;
+    font-size: 14px;
 }
 
 h3 {
