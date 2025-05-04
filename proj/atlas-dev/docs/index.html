@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/proj/atlas-dev/docs/style.css">
+    <title>atlas-dev</title>
+</head>
+<body>
+    <nav class="topbar">
+        <!-- <img src="/proj/atlas-dev/logo.svg" alt="Logo" class="topbar-logo"> -->
+        <a href="/proj/atlas-dev/" class="topbar-btn">Home</a>
+        <a href="/proj/atlas-dev/docs" class="topbar-btn">Documentation</a>
+        <a href="/proj/atlas-dev/updates" class="topbar-btn">Updates</a>
+        <a href="https://github.com/totallynotdrait/atlas-dev" class="topbar-btn">Repository</a>
+        <a href="/proj/atlas-dev/help" class="topbar-btn">Help</a>
+    </nav>
+    <div class="layout">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <button class="toggle-btn">Welcome</button>
+                <div class="submenu">
+                    <a href="/proj/atlas-dev/docs/core/welcome.html">History of Atlas</a>
+                    <a href="/proj/atlas-dev/docs/core/why.html">Why?</a>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <button class="toggle-btn">Utilities</button>
+                <div class="submenu">
+                    <a href="/proj/atlas-dev/docs/utils/tool1.html">Tool 1</a>
+                    <a href="/proj/atlas-dev/docs/utils/tool2.html">Tool 2</a>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            
+        </div>
+    </div>
+</body>
+<script>
+    document.querySelectorAll('.toggle-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const submenu = button.nextElementSibling;
+            submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+</script>
+</html>

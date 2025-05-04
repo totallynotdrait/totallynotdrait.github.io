@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #232634;
+    font-family: 'main1', Helvetica;
+    color: #ffffff;
+    background-image: url('/proj/atlas-dev/grain.png');
+    background-size: 200px;
+    image-rendering: pixelated; /* Makes the image render with a pixelated look */
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    image-rendering: -o-pixelated; /* Opera */
+    image-rendering: -webkit-optimize-contrast; /* Safari */
+    -ms-interpolation-mode: nearest-neighbor; /
+}
+
+.layout {
+    display: flex;
+    margin-top: 35px; /* Push down below the topbar */
+    height: calc(100vh - 35px); /* optional: full height minus topbar */
+}
+
+.sidebar {
+    width: 330px;
+    background-color: #1f1f1f;
+    box-shadow: inset -1px 0 0 #333;
+    overflow-y: auto;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.sidebar-section {
+    margin-bottom: 10px;
+}
+
+.toggle-btn {
+    width: 100%;
+    background-color: #2a2a2a;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submenu {
+    display: none;
+    flex-direction: column;
+    padding-left: 10px;
+    width: 299px;
+    background-color: #1e1e1e;
+}
+
+.submenu a {
+    display: block;          /* Makes the anchor take up the full width */
+    height: 30px;            /* Fixed height */
+    width: 100%;             /* Full width */
+    background-color: #222222;  /* Static background color (you can change the color code as needed) */
+    color: #c9c9c9;            /* Text color (can be changed) */
+    text-decoration: none;   /* Removes underline */
+    line-height: 30px;       /* Centers the text vertically within the anchor */
+    padding-left: 10px;      /* Optional: space from the left edge */
+    padding-right: 10px;     /* Optional: space from the right edge */
+}
+
+.submenu a:hover {
+    color: #fff;
+}
+
+.container {
+    width: 1100px;
+    margin: auto;
+    padding: 30px;
+    padding-top: 45px;
+    background-color: #222222;
+    border: #3b3b3b;
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+p:not(.subcontainer p, .sidebar p) {
+    margin: 30px;
+}
+
+.scrollview {
+    height: 300px;
+    width: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid #3b3b3b;
+    background-color: #222222;
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+.subcontainer {
+    width: auto;
+    background-color: #222222;
+    border: 1px solid #3b3b3b;
+    padding: 10px 15px;
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    z-index: 2000;
+
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #3b3b3b;
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.5);
+    font-family: 'main1', Helvetica;
+    background-color: rgba(30, 30, 30, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+
+.topbar-btn {
+    color: #c9c9c9;
+    text-decoration: none;
+    padding: 8px 12px;
+    border: none;
+
+    
+    transition: background-color 0.1s, border-color 0.1s;
+}
+
+.topbar-inner {
+    display: flex;
+    align-items: center;
+    height: 35px;
+}
+
+.topbar-btn:last-child {
+    border-left: none;
+}
+
+
+.topbar-btn:hover {
+    color: #ffffff;;
+}
+
+a:link {
+    color: #8caaee;
+}
+
+.blur-box {
+    position: fixed; /* or absolute */
+    top: 100px; /* adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(30, 30, 30, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    z-index: 2000; /* Must be higher than other content */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
