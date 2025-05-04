@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     background-color: #232634;
@@ -7,17 +8,17 @@ body {
     color: #ffffff;
     background-image: url('/proj/atlas-dev/grain.png');
     background-size: 200px;
-    image-rendering: pixelated; /* Makes the image render with a pixelated look */
-    image-rendering: -moz-crisp-edges; /* Firefox */
-    image-rendering: -o-pixelated; /* Opera */
-    image-rendering: -webkit-optimize-contrast; /* Safari */
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-pixelated;
+    image-rendering: -webkit-optimize-contrast;
     -ms-interpolation-mode: nearest-neighbor; /
 }
 
 .layout {
     display: flex;
-    margin-top: 35px; /* Push down below the topbar */
-    height: calc(100vh - 35px); /* optional: full height minus topbar */
+    margin-top: 17px;
+    height: calc(100vh - 35px);
 }
 
 .sidebar {
@@ -29,12 +30,10 @@ body {
 
 .main-content {
     flex: 1;
-    padding: 20px;
     overflow-y: auto;
 }
 
 .sidebar-section {
-    margin-bottom: 10px;
 }
 
 .toggle-btn {
@@ -49,6 +48,7 @@ body {
 }
 
 .submenu {
+    margin: 0;
     display: none;
     flex-direction: column;
     padding-left: 10px;
@@ -57,15 +57,15 @@ body {
 }
 
 .submenu a {
-    display: block;          /* Makes the anchor take up the full width */
-    height: 30px;            /* Fixed height */
-    width: 100%;             /* Full width */
-    background-color: #222222;  /* Static background color (you can change the color code as needed) */
-    color: #c9c9c9;            /* Text color (can be changed) */
-    text-decoration: none;   /* Removes underline */
-    line-height: 30px;       /* Centers the text vertically within the anchor */
-    padding-left: 10px;      /* Optional: space from the left edge */
-    padding-right: 10px;     /* Optional: space from the right edge */
+    display: block;
+    height: 30px;
+    width: 100%;
+    background-color: #222222;
+    color: #c9c9c9;
+    text-decoration: none;
+    line-height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .submenu a:hover {
@@ -110,7 +110,7 @@ p:not(.subcontainer p, .sidebar p) {
     left: 0;
     width: 100%;
     height: 35px;
-    z-index: 2000;
+    z-index: 5000;
 
     margin: 0;
     padding: 0;
@@ -155,8 +155,8 @@ a:link {
 }
 
 .blur-box {
-    position: fixed; /* or absolute */
-    top: 100px; /* adjust as needed */
+    position: fixed;
+    top: 100px;
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
@@ -167,6 +167,12 @@ a:link {
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
-    z-index: 2000; /* Must be higher than other content */
+    z-index: 2000;
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+
+/* markdown thing */
+#markdown-viewer h1, h2, p, ul, li {
+    color: #fff; /* match your theme */
 }
