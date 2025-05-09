@@ -12,12 +12,12 @@ body {
     image-rendering: -moz-crisp-edges;
     image-rendering: -o-pixelated;
     image-rendering: -webkit-optimize-contrast;
-    -ms-interpolation-mode: nearest-neighbor; /
+    -ms-interpolation-mode: nearest-neighbor;
 }
 
 .layout {
     display: flex;
-    margin-top: 17px;
+    margin-top: 35px;
     height: calc(100vh - 35px);
 }
 
@@ -31,9 +31,6 @@ body {
 .main-content {
     flex: 1;
     overflow-y: auto;
-}
-
-.sidebar-section {
 }
 
 .toggle-btn {
@@ -82,7 +79,7 @@ body {
     box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.5);
 }
 
-p:not(.subcontainer p, .sidebar p) {
+p:not(.subcontainer p, .sidebar p, #markdown-viewer p) {
     margin: 30px;
 }
 
@@ -130,9 +127,6 @@ p:not(.subcontainer p, .sidebar p) {
     text-decoration: none;
     padding: 8px 12px;
     border: none;
-
-    
-    transition: background-color 0.1s, border-color 0.1s;
 }
 
 .topbar-inner {
@@ -150,8 +144,18 @@ p:not(.subcontainer p, .sidebar p) {
     color: #ffffff;;
 }
 
+.sidebar-link {
+    color: #c9c9c9;
+    text-decoration: none;
+    border: none;
+}
+
+.sidebar-link:hover {
+    color: #ffffff;
+}
+
 a:link {
-    color: #8caaee;
+    color: #c9c9c9;
 }
 
 .blur-box {
@@ -171,8 +175,49 @@ a:link {
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 
+.separator {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    text-align: left;
+    border-top: 1px solid #333;
+    color: #c9c9c9;
+    margin: 17px 0 0 0;
+    position: relative;
+}
 
-/* markdown thing */
+.separator span {
+    background-color: #1f1f1f;
+    padding: 0 10px;
+    position: relative;
+    top: -0.7em;
+    font-size: 14px;
+}
+
 #markdown-viewer h1, h2, p, ul, li {
-    color: #fff; /* match your theme */
+    color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #444;
+    border-radius: 5px;
+    border: 2px solid #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #666;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #444 #1e1e1e;
 }
